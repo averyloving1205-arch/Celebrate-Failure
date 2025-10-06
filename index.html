@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>git bash: celebrate-failure</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta name="description" content="A playful, terminal-themed site that celebrates mistakes as commits on the path to mastery." />
+</head>
+<body>
+  <main class="wrap" aria-label="Celebrate Failure Terminal">
+    <header class="brand">
+      <div class="logo" aria-hidden="true">$</div>
+      <div>
+        <h1>celebrate-failure</h1>
+        <p class="tag">because every error is a feature in disguise</p>
+      </div>
+    </header>
+
+    <nav class="actions" aria-label="Primary">
+      <a class="btn" href="fails.html">Recent Fails</a>
+      <a class="btn" href="mottos.html">Team Mottos</a>
+    </nav>
+
+    <section class="terminal" role="region" aria-label="Git Bash">
+      <div id="screen" class="screen" aria-live="polite" aria-atomic="false"></div>
+
+      <form id="cli" autocomplete="off" aria-label="Command line input">
+        <label for="command" class="prompt" aria-hidden="true"><span class="user">avery</span>@<span class="repo">celebrate-failure</span> <span class="branch">(main)</span> $</label>
+        <input id="command" name="command" class="command" type="text" spellcheck="false" placeholder="type 'help' or 'about' to start" aria-describedby="helptext" />
+        <span id="caret" class="caret" aria-hidden="true"></span>
+      </form>
+      <p id="helptext" class="sr-only">Type a command like help, log, commit "message", push, clear, motto, stats, about.</p>
+    </section>
+
+    <section class="panels">
+      <article class="panel" aria-labelledby="recent-title">
+        <h2 id="recent-title">Recent Fails → Lessons</h2>
+        <ul id="fail-list" class="fail-list" aria-live="polite"></ul>
+        <div class="panel-actions"><a class="btn btn-ghost" href="fails.html" aria-label="Open all recent fails">Open page →</a></div>
+      </article>
+      <article class="panel" aria-labelledby="mottos-title">
+        <h2 id="mottos-title">Team Mottos</h2>
+        <ul id="mottos" class="mottos"></ul>
+        <div class="panel-actions"><a class="btn btn-ghost" href="mottos.html" aria-label="Open team mottos page">Open page →</a></div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <p>Made with <span aria-hidden="true">❤</span> and <code>git</code> — try <code>help</code>, <code>commit "I broke prod"</code>, then <code>push</code>.</p>
+    </footer>
+  </main>
+
+  <div id="confetti" class="confetti" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
